@@ -1,0 +1,1 @@
+const String IA_LOGO = "assets/images/logo.png";

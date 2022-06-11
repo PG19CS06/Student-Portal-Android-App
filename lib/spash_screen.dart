@@ -6,19 +6,17 @@ class SplashPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return _SplashWidget();
+    return _splashWidget();
   }
 
-  Widget _SplashWidget() {
+  Widget _splashWidget() {
     return Scaffold(
-      body: Container(
-        child: Center(
-          child: Container(
-            width: 200,
-            child: Image.asset(
-              IA_LOGO,
-              fit: BoxFit.fitHeight,
-            ),
+      body: Center(
+        child: SizedBox(
+          width: 200,
+          child: Image.asset(
+            IA_LOGO,
+            fit: BoxFit.fitHeight,
           ),
         ),
       ),

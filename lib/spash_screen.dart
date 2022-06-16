@@ -15,7 +15,7 @@ class SplashPage extends StatelessWidget {
         child: SizedBox(
           width: 200,
           child: Image.asset(
-            IA_LOGO,
+            IA_NAMED_LOGO,
             fit: BoxFit.fitHeight,
           ),
         ),

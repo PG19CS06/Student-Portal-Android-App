@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:student_portal_app/routing/route_constants.dart';
-import 'package:student_portal_app/spash_screen.dart';
 import 'routing/router.dart' as router;
 
 void main() {
@@ -18,7 +17,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const SplashPage(),
+      onGenerateRoute: router.generateRoute,
+      initialRoute: routeRoot,
+      // home: const SplashPage(),
       // onGenerateRoute: router.generateRoute,
       // initialRoute: routeRoot,
     );

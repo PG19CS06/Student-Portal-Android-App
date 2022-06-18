@@ -1,4 +1,3 @@
-/*
 
 import 'dart:io';
 
@@ -13,6 +12,7 @@ Route<dynamic> generateRoute(RouteSettings settings) {
     case routeRoot:
       return generatePlatformRoute(SplashPage());
   }
+  return generatePlatformRoute(SplashPage());
 }
 
 Route generatePlatformRoute<T>(Widget page) {
@@ -20,4 +20,3 @@ Route generatePlatformRoute<T>(Widget page) {
       ? CupertinoPageRoute(builder: (_) => page)
       : MaterialPageRoute(builder: (_) => page);
 }
-*/

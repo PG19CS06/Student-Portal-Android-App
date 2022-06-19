@@ -5,9 +5,57 @@ class DashboardPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Center(
-        child: Text("Dashboard"),
+    return Scaffold(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: InkWell(
+              onTap: (){},
+              child: Card(
+                child: Padding(
+                  padding: const EdgeInsets.all(32.0),
+                  child: Text("Attendance",style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold
+                  ),),
+                ),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: InkWell(
+              onTap: (){},
+              child: Card(
+                child: Padding(
+                  padding: const EdgeInsets.all(32.0),
+                  child: Text("Feedback",style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold
+                  ),),
+                ),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: InkWell(
+              onTap: (){},
+              child: Card(
+                child: Padding(
+                  padding: const EdgeInsets.all(32.0),
+                  child: Text("Notification",style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold
+                  ),),
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

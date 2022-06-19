@@ -5,10 +5,17 @@ class NotificationPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Center(
-        child: Text("Notification"),
-      ),
+    return Scaffold(
+      appBar: AppBar(title: const Text("Notification")),
+      body: ListView.builder(
+          itemCount: 10,
+          itemBuilder: (BuildContext context, int index) {
+            return ListTile(
+                leading: const Icon(Icons.list),
+                title: Text("Notification Title $index"),
+              subtitle: Text("Notification Content"),
+            );
+          }),
     );
   }
 }

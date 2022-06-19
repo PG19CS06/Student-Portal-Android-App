@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
       ),
       onGenerateRoute: router.generateRoute,
       initialRoute: routeRoot,
+      debugShowCheckedModeBanner: false,
       // home: const SplashPage(),
       // onGenerateRoute: router.generateRoute,
       // initialRoute: routeRoot,

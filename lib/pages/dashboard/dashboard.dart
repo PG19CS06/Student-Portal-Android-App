@@ -39,7 +39,6 @@ class DashboardPage extends StatelessWidget {
               onTap: (){
                 Navigator.of(context).pushNamed(routeFeedback);
               },
-              onTap: () {},
               child: Card(
                 child: Padding(
                   padding: const EdgeInsets.all(32.0),

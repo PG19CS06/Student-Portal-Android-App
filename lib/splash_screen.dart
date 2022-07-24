@@ -28,6 +28,9 @@ class SplashPage extends StatelessWidget {
             Navigator.of(context).pushNamed(routeLogin);
           }, child: Text("Login")),
           TextButton(onPressed: (){
+            Navigator.of(context).pushNamed(routeRegister);
+          }, child: Text("Register")),
+          TextButton(onPressed: (){
             Navigator.of(context).pushNamed(routeDashboard);
           }, child: Text("Dashboard")),
           TextButton(onPressed: (){

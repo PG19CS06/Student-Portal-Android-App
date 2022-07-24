@@ -10,7 +10,6 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-
   final _formKey = GlobalKey<FormState>();
   final _passwordKey = GlobalKey<FormFieldState>();
   final _usernameKey = GlobalKey<FormFieldState>();
@@ -19,15 +18,12 @@ class _LoginPageState extends State<LoginPage> {
   final _usernameController = TextEditingController();
   final _passwordController = TextEditingController();
 
-
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: _loginWidget()
-    );
+    return Scaffold(body: _loginWidget());
   }
 
-  Widget _loginWidget({loading=false}) {
+  Widget _loginWidget({loading = false}) {
     return Center(
       child: SingleChildScrollView(
         child: Form(
@@ -38,10 +34,10 @@ class _LoginPageState extends State<LoginPage> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               mainAxisSize: MainAxisSize.max,
               children: <Widget>[
-                const Text("Login",style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold
-                ),),
+                const Text(
+                  "Login",
+                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                ),
                 spacer32,
                 TextFormField(
                   controller: _usernameController,
@@ -71,8 +67,14 @@ class _LoginPageState extends State<LoginPage> {
                       border: OutlineInputBorder()),
                 ),
                 spacer32,
-                ElevatedButton(onPressed: (){}, child: const Text(sLogin)),
-//                      Center(child: Text("Forgot Password? Reset Password")),
+                ElevatedButton(onPressed: () {}, child: const Text(sLogin)),
+                Center(
+                    child: InkWell(
+                  child: Text("New User? Create Account"),
+                  onTap: () {
+                    // Navigator.of(context).pushNamed(routeRegister);
+                  },
+                )),
               ],
             ),
           ),

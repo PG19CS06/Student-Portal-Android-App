@@ -14,16 +14,21 @@ class FeedbackPage extends StatelessWidget {
       'Subject 2',
       'Subject 3',
       'Subject 4',
-      'Subject 5',];
+      'Subject 5',
+    ];
     return Scaffold(
-      appBar: AppBar(title: Text("Feedback"),),
+      appBar: AppBar(
+        title: Text("Feedback"),
+      ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Padding(
             padding: const EdgeInsets.all(16.0),
-            child: DropdownButton(
+            child: DropdownButtonFormField(
+              decoration:
+                  InputDecoration(border: OutlineInputBorder(gapPadding: 0)),
 // Initial Value
               value: dropdownvalue,
 
@@ -39,19 +44,23 @@ class FeedbackPage extends StatelessWidget {
               }).toList(),
               // After selecting the desired option,it will
               // change button value to selected value
-              onChanged: (String? newValue) {
-              },          ),
-          ),
-          Padding(
-            padding: EdgeInsets.all(16.0),
-            child: TextField(
-              maxLines: 8, //or null
-              decoration: InputDecoration.collapsed(hintText: "Enter your text here"),
+              onChanged: (String? newValue) {},
             ),
           ),
           Padding(
+            padding: EdgeInsets.all(16.0),
+            child: TextFormField(
+              maxLines: 16, //or null
+              decoration: InputDecoration.collapsed(
+                  hintText: "Enter your text here",
+                  border: OutlineInputBorder()),
+
+            ),
+          ),
+          Expanded(child: Container()),
+          Padding(
             padding: const EdgeInsets.all(16.0),
-            child: ElevatedButton(onPressed: (){}, child: Text("Submit")),
+            child: ElevatedButton(onPressed: () {}, child: Text("Submit")),
           )
         ],
       ),

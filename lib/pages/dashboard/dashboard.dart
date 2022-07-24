@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:student_portal_app/routing/route_constants.dart';
 
 class DashboardPage extends StatelessWidget {
   const DashboardPage({Key? key}) : super(key: key);
@@ -30,7 +31,9 @@ class DashboardPage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: InkWell(
-              onTap: (){},
+              onTap: (){
+                Navigator.of(context).pushNamed(routeFeedback);
+              },
               child: Card(
                 child: Padding(
                   padding: const EdgeInsets.all(32.0),
@@ -45,7 +48,9 @@ class DashboardPage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: InkWell(
-              onTap: (){},
+              onTap: (){
+                Navigator.of(context).pushNamed(routeNotification);
+              },
               child: Card(
                 child: Padding(
                   padding: const EdgeInsets.all(32.0),

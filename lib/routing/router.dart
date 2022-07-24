@@ -5,6 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:student_portal_app/pages/login/login.dart';
 import 'package:student_portal_app/pages/notification/notification_details/notification_details.dart';
+import 'package:student_portal_app/pages/register/register.dart';
 import 'package:student_portal_app/routing/route_constants.dart';
 
 import '../pages/dashboard/dashboard.dart';
@@ -18,6 +19,8 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return generatePlatformRoute(SplashPage());
     case routeLogin:
       return generatePlatformRoute(LoginPage());
+    case routeRegister:
+      return generatePlatformRoute(RegisterPage());
     case routeDashboard:
       return generatePlatformRoute(DashboardPage());
     case routeNotification:

@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:student_portal_app/image_assets.dart';
 import 'package:student_portal_app/routing/route_constants.dart';
@@ -11,6 +13,10 @@ class SplashPage extends StatelessWidget {
   }
 
   Widget _splashWidget(BuildContext context) {
+/*
+    Timer(Duration(seconds: 1),
+        () => Navigator.of(context).pushNamed(routeLogin));
+*/
     return Scaffold(
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -24,6 +30,11 @@ class SplashPage extends StatelessWidget {
               ),
             ),
           ),
+    ElevatedButton(onPressed: (){
+      Navigator.of(context).pushReplacementNamed(routeRegister);
+    }, child: Text("Get Started"))
+
+/*
           TextButton(onPressed: (){
             Navigator.of(context).pushNamed(routeLogin);
           }, child: Text("Login")),
@@ -39,6 +50,7 @@ class SplashPage extends StatelessWidget {
           TextButton(onPressed: (){
             Navigator.of(context).pushNamed(routeFeedback);
           }, child: Text("Feedback")),
+*/
         ],
       ),
     );

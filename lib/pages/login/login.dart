@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:student_portal_app/app_constants.dart';
+import 'package:student_portal_app/routing/route_constants.dart';
 import 'package:student_portal_app/strings.dart';
 
 class LoginPage extends StatefulWidget {
@@ -67,12 +68,17 @@ class _LoginPageState extends State<LoginPage> {
                       border: OutlineInputBorder()),
                 ),
                 spacer32,
-                ElevatedButton(onPressed: () {}, child: const Text(sLogin)),
+                ElevatedButton(
+                    onPressed: () {
+                      Navigator.of(context).pushNamed(routeDashboard);
+                    },
+                    child: const Text(sLogin)),
+                spacer32,
                 Center(
                     child: InkWell(
                   child: Text("New User? Create Account"),
                   onTap: () {
-                    // Navigator.of(context).pushNamed(routeRegister);
+                    Navigator.of(context).pushNamed(routeRegister);
                   },
                 )),
               ],

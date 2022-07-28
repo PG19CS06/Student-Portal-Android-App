@@ -18,7 +18,7 @@ class FeedbackPage extends StatelessWidget {
     ];
     return Scaffold(
       appBar: AppBar(
-        title: Text("Feedback"),
+        title: const Text("Feedback"),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -47,7 +47,7 @@ class FeedbackPage extends StatelessWidget {
               onChanged: (String? newValue) {},
             ),
           ),
-          Padding(
+          const Padding(
             padding: EdgeInsets.all(16.0),
             child: TextFormField(
               maxLines: 16, //or null
@@ -60,7 +60,7 @@ class FeedbackPage extends StatelessWidget {
           Expanded(child: Container()),
           Padding(
             padding: const EdgeInsets.all(16.0),
-            child: ElevatedButton(onPressed: () {}, child: Text("Submit")),
+            child: ElevatedButton(onPressed: () {}, child: const Text("Submit")),
           )
         ],
       ),

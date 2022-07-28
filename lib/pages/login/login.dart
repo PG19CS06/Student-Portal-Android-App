@@ -76,7 +76,7 @@ class _LoginPageState extends State<LoginPage> {
                 spacer32,
                 Center(
                     child: InkWell(
-                  child: Text("New User? Create Account"),
+                  child: const Text("New User? Create Account"),
                   onTap: () {
                     Navigator.of(context).pushNamed(routeRegister);
                   },

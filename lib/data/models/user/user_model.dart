@@ -12,10 +12,10 @@ class UserModel {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['user_id'] = this.userId;
-    data['session_key'] = this.token;
-    data['full_name'] = this.fullName;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['user_id'] = userId;
+    data['session_key'] = token;
+    data['full_name'] = fullName;
     return data;
   }
 }

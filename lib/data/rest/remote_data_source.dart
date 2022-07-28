@@ -32,7 +32,7 @@ class RemoteDataSource extends ConnectDataSource {
         return DataOrException(null, ApiError(), null);
       }
     } catch (ex) {
-      print(ex);
+      debugPrint(ex.toString());
       return DataOrException(null, NoInternet(), null);
     }
   }

@@ -70,7 +70,7 @@ class _LoginPageState extends State<LoginPage> {
                 ElevatedButton(onPressed: () {}, child: const Text(sLogin)),
                 Center(
                     child: InkWell(
-                  child: Text("New User? Create Account"),
+                  child: const Text("New User? Create Account"),
                   onTap: () {
                     // Navigator.of(context).pushNamed(routeRegister);
                   },

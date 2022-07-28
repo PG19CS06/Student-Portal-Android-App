@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:student_portal_app/app_constants.dart';
 
 class DashboardPage extends StatelessWidget {
   const DashboardPage({Key? key}) : super(key: key);
@@ -6,7 +7,7 @@ class DashboardPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("LBS Connect"),),
+      appBar: AppBar(title: const Text(appName),),
       drawer: Drawer(child: Container(),),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -16,9 +17,9 @@ class DashboardPage extends StatelessWidget {
             padding: const EdgeInsets.all(16.0),
             child: InkWell(
               onTap: (){},
-              child: Card(
+              child: const Card(
                 child: Padding(
-                  padding: const EdgeInsets.all(32.0),
+                  padding: EdgeInsets.all(32.0),
                   child: Text("Attendance",style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.bold
@@ -31,9 +32,9 @@ class DashboardPage extends StatelessWidget {
             padding: const EdgeInsets.all(16.0),
             child: InkWell(
               onTap: (){},
-              child: Card(
+              child: const Card(
                 child: Padding(
-                  padding: const EdgeInsets.all(32.0),
+                  padding: EdgeInsets.all(32.0),
                   child: Text("Feedback",style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.bold
@@ -46,9 +47,9 @@ class DashboardPage extends StatelessWidget {
             padding: const EdgeInsets.all(16.0),
             child: InkWell(
               onTap: (){},
-              child: Card(
+              child: const Card(
                 child: Padding(
-                  padding: const EdgeInsets.all(32.0),
+                  padding: EdgeInsets.all(32.0),
                   child: Text("Notification",style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.bold

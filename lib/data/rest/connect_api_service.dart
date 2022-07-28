@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:chopper/chopper.dart';
+import 'package:flutter/material.dart';
 import 'package:student_portal_app/app_constants.dart';
 
 part 'connect_api_service.chopper.dart';
@@ -32,7 +33,7 @@ abstract class ConnectApiService extends ChopperService {
   static ConnectApiService? getApiService(String token, Function tokenNotifier,
       {bool force = false}) {
     if (null == instance || force) {
-      print("Creating API Service with token $token");
+      debugPrint("Creating API Service with token $token");
       ChopperClient client = ChopperClient(
         // # - change baseUrl in app_constants.dart
         baseUrl: baseUrl,
@@ -43,7 +44,7 @@ abstract class ConnectApiService extends ChopperService {
             request.parameters.forEach((key, value) {
               params += "$key=$value&";
             });
-            print("Chopper token: ${token}");
+            debugPrint("Chopper token: $token");
             if (request.method == HttpMethod.Post) {
               chopperLogger.shout("POST=> ${request.baseUrl}/${request.url}?$params");
             }

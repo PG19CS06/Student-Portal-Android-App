@@ -22,5 +22,12 @@ abstract class ConnectDataSource {
   Future<DataOrException<UserModel>> login(
       String mobile, String password, String firebaseId);
 
+/*
+  Future<DataOrException<List<NotificationModel>>> fetchNotifications(
+      int userId);
+
+  Future<DataOrException<bool>> readNotification(int notificationId);
+*/
+
 
 }

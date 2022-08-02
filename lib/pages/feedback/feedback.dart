@@ -6,10 +6,11 @@ class FeedbackPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Initial Selected Value
-    String dropdownvalue = 'Subject 1';
+    String dropdownvalue = 'Select Subject';
 
     // List of items in our dropdown menu
     var items = [
+      'Select Subject',
       'Subject 1',
       'Subject 2',
       'Subject 3',
@@ -47,11 +48,11 @@ class FeedbackPage extends StatelessWidget {
               onChanged: (String? newValue) {},
             ),
           ),
-          const Padding(
-            padding: EdgeInsets.all(16.0),
+          Padding(
+            padding: const EdgeInsets.all(16.0),
             child: TextFormField(
               maxLines: 16, //or null
-              decoration: InputDecoration.collapsed(
+              decoration: const InputDecoration.collapsed(
                   hintText: "Enter your text here",
                   border: OutlineInputBorder()),
 

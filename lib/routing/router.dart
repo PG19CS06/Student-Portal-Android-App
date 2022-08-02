@@ -3,8 +3,10 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:student_portal_app/pages/attendance/attendance.dart';
 import 'package:student_portal_app/pages/login/login.dart';
 import 'package:student_portal_app/pages/notification/notification_details/notification_details.dart';
+import 'package:student_portal_app/pages/profile/profile.dart';
 import 'package:student_portal_app/pages/register/register.dart';
 import 'package:student_portal_app/routing/route_constants.dart';
 
@@ -29,6 +31,10 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return generatePlatformRoute(NotificationDetailsPage());
     case routeFeedback:
       return generatePlatformRoute(FeedbackPage());
+    case routeProfile:
+      return generatePlatformRoute(ProfilePage());
+    case routeAttendance:
+      return generatePlatformRoute(AttendancePage());
   }
   return generatePlatformRoute(SplashPage());
 }

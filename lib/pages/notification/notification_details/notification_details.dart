@@ -22,21 +22,21 @@ class NotificationDetailsPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(
-                "friday 12 july 2022",
+                "31 july 2022",
                 style: TextStyle(color: Colors.grey),
               ),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(
-                "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",
+                "Result Published - M.Tech S1 (R,S) Exam Dec 2021- Palakkad Cluster",
            style: TextStyle(color: Colors.black,fontSize: 20,fontWeight: FontWeight.bold),
               ),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ultricies dolor vitae volutpat bibendum. Aenean vitae ullamcorper dui. Phasellus consectetur blandit tortor, id laoreet ante viverra in. Quisque augue turpis, hendrerit id nunc sit amet, condimentum viverra magna. Sed egestas pellentesque commodo. Ut at eros elit. Donec rutrum metus placerat, feugiat ipsum dictum, dapibus nisi.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ultricies dolor vitae volutpat bibendum. Aenean vitae ullamcorper dui. Phasellus consectetur blandit tortor, id laoreet ante viverra in. Quisque augue turpis, hendrerit id nunc sit amet, condimentum viverra magna. Sed egestas pellentesque commodo. Ut at eros elit. Donec rutrum metus placerat, feugiat ipsum dictum, dapibus nisi.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ultricies dolor vitae volutpat bibendum. Aenean vitae ullamcorper dui. Phasellus consectetur blandit tortor, id laoreet ante viverra in. Quisque augue turpis, hendrerit id nunc sit amet, condimentum viverra magna. Sed egestas pellentesque commodo. Ut at eros elit. Donec rutrum metus placerat, feugiat ipsum dictum, dapibus nisi.\nUt scelerisque molestie felis. Phasellus vitae accumsan urna. Nulla porta ex dolor, vitae porta ex malesuada nec. Maecenas egestas imperdiet ligula, ut consequat ipsum aliquam at. Nullam mollis sodales vehicula. Cras tincidunt, dui nec ornare vulputate, lectus dui pharetra mauris, id imperdiet nisi purus sed ",
+                  "It is hereby notified that the result of M.Tech S1 (R,S) Exam Dec 2021 Palakkad Cluster is published. The detailed result is available under the 'Result' tab of the University website and in student and College login. Candidates who desire to apply for the copy of answer scripts can register through the portal till 05.08.2022 (date applicable for both student and college) by remitting a fee of ₹500. Late requests for answer scripts will not be allowed. ",
               style: TextStyle(),
               ),
 

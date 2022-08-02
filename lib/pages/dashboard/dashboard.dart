@@ -15,6 +15,31 @@ class DashboardPage extends StatelessWidget {
       drawer: Drawer(
         child: _drawerWidget(context),
       ),
+      bottomNavigationBar: BottomNavigationBar(
+
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.edit_note),
+            label: 'Attendance',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.check),
+            label: 'Feedback',
+          ),
+         /*BottomNavigationBarItem(
+            icon: Icon(Icons.add_alert),
+            label: 'Notification',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Profile',
+          ),*/
+        ],
+      ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -22,7 +47,9 @@ class DashboardPage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).pushNamed(routeAttendance);
+              },
               child: const Card(
                 child: Padding(
                   padding: EdgeInsets.all(32.0),
@@ -37,7 +64,7 @@ class DashboardPage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: InkWell(
-              onTap: (){
+              onTap: () {
                 Navigator.of(context).pushNamed(routeFeedback);
               },
               child: const Card(
@@ -54,7 +81,7 @@ class DashboardPage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: InkWell(
-              onTap: (){
+              onTap: () {
                 Navigator.of(context).pushNamed(routeNotification);
               },
               child: const Card(
@@ -84,18 +111,24 @@ class DashboardPage extends StatelessWidget {
                   IA_USER_AVATAR,
                 ),
               ),
-              title: Text("Name"),
-              subtitle: Text("mail@email.com"),
+              title: Text("Raj"),
+              subtitle: Text("raj@gmail.com"),
+              onTap: (){
+                Navigator.of(ctx!).popAndPushNamed(routeProfile);
+              },
             ),
             Divider(),
             ListTile(
               leading: Icon(Icons.edit_note),
               title: Text("Attendance"),
+              onTap: (){
+                Navigator.of(ctx!).popAndPushNamed(routeAttendance);
+              },
             ),
             ListTile(
               leading: Icon(Icons.check),
               title: Text("Feedback"),
-              onTap: (){
+              onTap: () {
                 Navigator.of(ctx!).popAndPushNamed(routeFeedback);
               },
             ),

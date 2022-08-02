@@ -6,7 +6,7 @@ class FeedbackPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Initial Selected Value
-    String dropdownvalue = 'Select Subject';
+    String dropdownValue = 'Select Subject';
 
     // List of items in our dropdown menu
     var items = [
@@ -31,7 +31,7 @@ class FeedbackPage extends StatelessWidget {
               decoration:
                   InputDecoration(border: OutlineInputBorder(gapPadding: 0)),
 // Initial Value
-              value: dropdownvalue,
+              value: dropdownValue,
 
               // Down Arrow Icon
               icon: const Icon(Icons.keyboard_arrow_down),
